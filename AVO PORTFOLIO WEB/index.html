@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>AVO Portfolio - Modern & Minimal Portfolio</title>
+    <meta
+      name="description"
+      content="AVO Portfolio - Modern, minimal, and animated web agency portfolio. Dual hero, video, counters, and more."
+    />
+    <meta name="theme-color" content="#e63946" />
+
+    <!-- Social Sharing -->
+    <meta
+      property="og:title"
+      content="AVO Portfolio - Modern Minimal Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Modern, minimal, and animated web agency portfolio. Dual hero, video, counters, and more."
+    />
+    <meta property="og:image" content="images/bg1.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- Preconnect for Google Fonts (performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css for entrance effects -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Preload hero images for faster LCP -->
+    <link rel="preload" as="image" href="images/bg1.jpg" />
+    <link rel="preload" as="image" href="images/bg2.jpg" />
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+      <div class="container navbar-flex">
+        <a href="#" class="logo">a<span class="logo-red">v</span>o</a>
+        <ul class="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Work</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section Start -->
+    <section id="hero" class="hero-slider">
+      <div
+        class="hero-slide active"
+        style="background-image: url('images/bg_1.jpg')"
+      >
+        <div class="hero-content">
+          <div class="hero-left">
+            <h1 class="hero-headline animate__animated animate__fadeInUp">
+              WE CREATE MODERN AND MINIMAL WEBSITES
+            </h1>
+            <p
+              class="hero-desc animate__animated animate__fadeInUp animate__delay-1s"
+            >
+              A small river named Duden flows by their place and supplies it
+              with the necessary regelialia.
+            </p>
+            <button class="hero-btn">Learn More</button>
+          </div>
+          <div class="hero-right">
+            <div class="counter-block">
+              <span class="counter" data-from="0" data-to="20" data-suffix="+"
+                >0</span
+              >
+              <div class="counter-label">Years of Experience</div>
+            </div>
+          </div>
+        </div>
+        <button class="video-btn" id="openVideoModal">
+          <span class="play-icon">&#9658;</span>
+        </button>
+      </div>
+      <div class="hero-slide" style="background-image: url('images/bg_2.jpg')">
+        <div class="hero-content">
+          <div class="hero-left">
+            <h1>400+ Projects Delivered</h1>
+            <p>Trusted by hundreds of clients worldwide.</p>
+            <button class="hero-btn">View Portfolio</button>
+          </div>
+          <div class="hero-right">
+            <div class="counter-block">
+              <span
+                class="counter"
+                data-from="100"
+                data-to="400"
+                data-suffix="+"
+                >100</span
+              >
+              <div class="counter-label">Successful Projects Delivered</div>
+            </div>
+          </div>
+        </div>
+        <button class="video-btn" id="openVideoModal2">
+          <span class="play-icon">&#9658;</span>
+        </button>
+      </div>
+      <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+      </div>
+    </section>
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <video id="heroVideo" controls>
+          <source src="videos/Introducing Stanley.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeInUp">
+          ABOUT US
+        </h2>
+        <div class="about-icons-row">
+          <div
+            class="about-icon-item animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <img src="images/images.png" alt="UI/UX Design" />
+            <span>UI/UX Design</span>
+          </div>
+          <div
+            class="about-icon-item animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <img src="images/Web Development.jpeg" alt="Web Development" />
+            <span>Web Development</span>
+          </div>
+          <div
+            class="about-icon-item animate__animated animate__fadeInUp animate__delay-3s"
+          >
+            <img src="images/Product Design.jpeg" alt="Product Design" />
+            <span>Product Design</span>
+          </div>
+          <div
+            class="about-icon-item animate__animated animate__fadeInUp animate__delay-4s"
+          >
+            <img src="images/mobile apps.png" alt="Mobile Apps" />
+            <span>Mobile Apps</span>
+          </div>
+          <div
+            class="about-icon-item animate__animated animate__fadeInUp animate__delay-5s"
+          >
+            <img src="images/SEO.png" alt="SEO" />
+            <span>SEO</span>
+          </div>
+        </div>
+        <div class="about-main-row">
+          <div
+            class="about-main-left animate__animated animate__fadeInLeft animate__delay-1s"
+          >
+            <h3>Welcome to AVO A<br />Personal Portfolio<br />Web Agency</h3>
+            <p class="about-lead">
+              Separated they live in Bookmarksgrove right at the coast of the
+              Semantics, a large language ocean. A small river named Duden flows
+              by their place and supplies it with the necessary regelialia. It
+              is a paradisematic country, in which roasted parts of sentences
+              fly into your mouth.
+            </p>
+          </div>
+          <div
+            class="about-main-center animate__animated animate__zoomIn animate__delay-2s"
+          >
+            <img
+              src="images/about.jpg"
+              alt="About Main"
+              class="about-main-img"
+            />
+          </div>
+          <div
+            class="about-main-right animate__animated animate__fadeInRight animate__delay-1s"
+          >
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean. A small river named Duden flows by their
+              place and supplies it with the necessary regelialia. It is a
+              paradisematic country, in which roasted parts of sentences fly
+              into your mouth.
+            </p>
+            <a href="#works" class="btn btn-primary">View all projects</a>
+          </div>
+        </div>
+        <div class="about-features-row">
+          <div
+            class="about-feature-card animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <span class="about-feature-num">01</span>
+            <div>
+              <h4>Search Engine Optimization</h4>
+              <p>Far far away, behind the word mountains</p>
+            </div>
+          </div>
+          <div
+            class="about-feature-card animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <span class="about-feature-num">02</span>
+            <div>
+              <h4>Search Engine Optimization</h4>
+              <p>Far far away, behind the word mountains</p>
+            </div>
+          </div>
+          <div
+            class="about-feature-card animate__animated animate__fadeInUp animate__delay-3s"
+          >
+            <span class="about-feature-num">03</span>
+            <div>
+              <h4>Search Engine Optimization</h4>
+              <p>Far far away, behind the word mountains</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio/Works Section -->
+    <section id="works" class="works-section">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeInUp">
+          OUR WORKS
+        </h2>
+        <div class="works-list">
+          <!-- Card 1 -->
+          <div class="work-row animate__animated animate__fadeInLeft">
+            <div class="work-img">
+              <img src="images/work-1.jpg" alt="Cassette Tape" />
+            </div>
+            <div class="work-info">
+              <span class="work-category">Product Design</span>
+              <h3>Cassette Tape</h3>
+              <p>Minimal product design for music lovers.</p>
+              <div class="work-meta">
+                <img src="images/person_1.jpg" alt="Author" />
+                <span>John Doe</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="work-row work-row-reverse animate__animated animate__fadeInRight animate__delay-1s"
+          >
+            <div class="work-img">
+              <img src="images/work-2.jpg" alt="Miniwall Clock" />
+            </div>
+            <div class="work-info">
+              <span class="work-category">Minimal Interior</span>
+              <h3>Miniwall Clock</h3>
+              <p>Modern wall clock for minimal interiors.</p>
+              <div class="work-meta">
+                <img src="images/person_2.jpg" alt="Author" />
+                <span>Jane Smith</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="work-row animate__animated animate__fadeInLeft animate__delay-2s"
+          >
+            <div class="work-img">
+              <img src="images/work-3.jpg" alt="AVO Portfolio Agency" />
+            </div>
+            <div class="work-info">
+              <span class="work-category">Branding</span>
+              <h3>AVO Portfolio Agency</h3>
+              <p>Agency branding and web design.</p>
+              <div class="work-meta">
+                <img src="images/person_3.jpg" alt="Author" />
+                <span>Alex Brown</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="work-row work-row-reverse animate__animated animate__fadeInRight animate__delay-3s"
+          >
+            <div class="work-img">
+              <img src="images/work-4.jpg" alt="Hand Writing" />
+            </div>
+            <div class="work-info">
+              <span class="work-category">Stationary</span>
+              <h3>Hand Writing</h3>
+              <p>Creative writing and stationary design.</p>
+              <div class="work-meta">
+                <img src="images/person_1.jpg" alt="Author" />
+                <span>John Doe</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="work-row animate__animated animate__fadeInLeft animate__delay-4s"
+          >
+            <div class="work-img">
+              <img src="images/work-5.jpg" alt="Keyboard" />
+            </div>
+            <div class="work-info">
+              <span class="work-category">Productivity</span>
+              <h3>Keyboard</h3>
+              <p>Minimal keyboard for productivity.</p>
+              <div class="work-meta">
+                <img src="images/person_2.jpg" alt="Author" />
+                <span>Jane Smith</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="work-row work-row-reverse animate__animated animate__fadeInRight animate__delay-5s"
+          >
+            <div class="work-img">
+              <img src="images/work-6.jpg" alt="Spirel" />
+            </div>
+            <div class="work-info">
+              <span class="work-category">Notebook</span>
+              <h3>Spirel</h3>
+              <p>Modern spiral notebook design.</p>
+              <div class="work-meta">
+                <img src="images/person_3.jpg" alt="Author" />
+                <span>Alex Brown</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeInUp">
+          CLIENTS SAYS ABOUT US?
+        </h2>
+        <div class="testimonials-carousel">
+          <div class="testimonials-track">
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&#10077;</div>
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.
+              </p>
+              <div class="testimonial-meta">
+                <img src="images/person_1.jpg" alt="Roger Scott" />
+                <div>
+                  <span class="testimonial-name">Roger Scott</span>
+                  <span class="testimonial-role">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&#10077;</div>
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.
+              </p>
+              <div class="testimonial-meta">
+                <img src="images/person_2.jpg" alt="Roger Scott" />
+                <div>
+                  <span class="testimonial-name">Roger Scott</span>
+                  <span class="testimonial-role">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&#10077;</div>
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.
+              </p>
+              <div class="testimonial-meta">
+                <img src="images/person_1.jpg" alt="Roger Scott" />
+                <div>
+                  <span class="testimonial-name">Roger Scott</span>
+                  <span class="testimonial-role">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&#10077;</div>
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.
+              </p>
+              <div class="testimonial-meta">
+                <img src="images/person_2.jpg" alt="Roger Scott" />
+                <div>
+                  <span class="testimonial-name">Roger Scott</span>
+                  <span class="testimonial-role">Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-dots"></div>
+        </div>
+        <div class="cta-card">
+          <img src="images/bg_2.jpg" alt="CTA Background" class="cta-bg" />
+          <div class="cta-overlay"></div>
+          <div class="cta-content">
+            <span class="cta-label">Get Started</span>
+            <h3>Fill in the brief and get the project estimate</h3>
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts.
+            </p>
+            <a href="#contact" class="btn btn-primary">Get started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <h2 class="section-title animate__animated animate__fadeInUp">
+          RECENT BLOG
+        </h2>
+        <div class="blog-list">
+          <div
+            class="blog-card animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <img src="images/image_1.jpg" alt="Blog 1" />
+            <div class="blog-info">
+              <span class="blog-date">JULY 5, 2025</span>
+              <h3>Analyzing Minimalism</h3>
+              <p>How minimal design can boost your brand and productivity.</p>
+            </div>
+          </div>
+          <div
+            class="blog-card animate__animated animate__fadeInUp animate__delay-2s"
+          >
+            <img src="images/image_2.jpg" alt="Blog 2" />
+            <div class="blog-info">
+              <span class="blog-date">JULY 2, 2025</span>
+              <h3>Portfolio Essentials</h3>
+              <p>What every modern portfolio website should have in 2025.</p>
+            </div>
+          </div>
+          <div
+            class="blog-card animate__animated animate__fadeInUp animate__delay-3s"
+          >
+            <img src="images/image_3.jpg" alt="Blog 3" />
+            <div class="blog-info">
+              <span class="blog-date">JUNE 28, 2025</span>
+              <h3>Design Trends</h3>
+              <p>Latest trends in web and UI/UX design for agencies.</p>
+            </div>
+          </div>
+          <div
+            class="blog-card animate__animated animate__fadeInUp animate__delay-4s"
+          >
+            <img src="images/image_4.jpg" alt="Blog 4" />
+            <div class="blog-info">
+              <span class="blog-date">JUNE 20, 2025</span>
+              <h3>Business Minimalism</h3>
+              <p>Minimalism in business: why less is more for your brand.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="footer-section">
+      <div class="footer-angled-bg"></div>
+      <div class="container">
+        <!-- Test button for contact section -->
+        <div style="text-align: center; margin-bottom: 2rem">
+          <button
+            onclick="testContactScroll()"
+            style="
+              background: #e63946;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Test Contact Scroll
+          </button>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-logo-col">
+            <span class="footer-logo">avo</span>
+            <p class="footer-desc">
+              Far far away, behind the word mountains, far from the countries.
+            </p>
+            <div class="footer-social">
+              <a href="#"><img src="images/Facebook.webp" alt="Twitter" /></a>
+              <a href="#"><img src="images/Twitter.png" alt="Facebook" /></a>
+              <a href="#"><img src="images/LinkedIn.png" alt="Instagram" /></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Meet the team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-contact-col">
+            <h4>Have a Questions?</h4>
+            <ul class="footer-contact-list">
+              <li><span class="footer-icon">📍</span> Mardan Pakistan</li>
+              <li><span class="footer-icon">📞</span> +923482014604</li>
+              <li>
+                <span class="footer-icon">✉️</span> nomikhan201460@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            Copyright &copy;2025 All rights reserved | This template is made
+            during internship at EziTech
+            <span style="color: #e63946">&#10084;</span> by
+            <b> Muhammad Nouman</b>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
