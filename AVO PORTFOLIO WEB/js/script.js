@@ -1,11 +1,11 @@
-// Navbar toggle for mobile
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.querySelector('.nav-links');
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-// Smooth scroll for nav links - SPEED UP
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+  });
+}
 const links = document.querySelectorAll('.nav-links a');
 for (const link of links) {
   link.addEventListener('click', function(e) {
@@ -14,13 +14,12 @@ for (const link of links) {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        // Try custom smooth scroll first, fallback to native smooth scroll
         try {
           const navbarHeight = document.querySelector('.navbar').offsetHeight;
-          const targetPosition = target.offsetTop - navbarHeight; // Dynamic navbar height
+          const targetPosition = target.offsetTop - navbarHeight; 
           const startPosition = window.pageYOffset;
           const distance = targetPosition - startPosition;
-          const duration = 600; // Reduced from default ~1000ms to 600ms
+          const duration = 600; 
           let start = null;
           
           function animation(currentTime) {
@@ -40,14 +39,11 @@ for (const link of links) {
           
           requestAnimationFrame(animation);
         } catch (error) {
-          // Fallback to native smooth scroll
           target.scrollIntoView({ 
             behavior: 'smooth', 
             block: 'start' 
           });
         }
-        
-        // Additional fallback: ensure scroll happens even if smooth scroll fails
         setTimeout(() => {
           const targetElement = document.querySelector(href);
           if (targetElement) {
@@ -61,8 +57,6 @@ for (const link of links) {
     }
   });
 }
-
-// Scroll-triggered Animate.css activation
 function animateOnScroll() {
   const animatedEls = document.querySelectorAll('.animate__animated');
   const windowHeight = window.innerHeight;
@@ -76,7 +70,6 @@ function animateOnScroll() {
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
 
-// Testimonial Carousel
 const testimonialsTrack = document.querySelector('.testimonials-track');
 const testimonialsDots = document.querySelector('.testimonials-dots');
 const testimonialCards = document.querySelectorAll('.testimonial-card');
@@ -123,7 +116,6 @@ window.addEventListener('load', () => {
   updateTestimonialsSlider();
 });
 
-// Hero Slider Logic
 const slides = document.querySelectorAll('.hero-slide');
 const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
@@ -173,8 +165,8 @@ function animateCounter(idx) {
   const to = parseInt(counter.getAttribute('data-to'));
   const suffix = counter.getAttribute('data-suffix') || '';
   let start = null;
-  const duration = 800; // Reduced from 1200ms to 800ms for faster animation
-  function step(ts) {
+  const duration = 800;
+    function step(ts) {
     if (!start) start = ts;
     let progress = Math.min((ts - start) / duration, 1);
     let value = Math.floor(from + (to - from) * progress);
@@ -189,7 +181,6 @@ function animateCounter(idx) {
   counterAnimated[idx] = true;
 }
 
-// Video Modal Logic
 const modal = document.getElementById('videoModal');
 const openBtns = [
   document.getElementById('openVideoModal'),
@@ -219,14 +210,9 @@ modal.addEventListener('click', (e) => {
     video.currentTime = 0;
   }
 });
-
-// Init
 showSlide(0);
 startSlider();
-// Animate counter for first slide on load
 animateCounter(0);
-
-// Navbar sticky background on scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 10) {
@@ -235,27 +221,21 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled');
   }
 });
-
-// Scroll Spy - Highlight active navigation based on scroll position
 function updateActiveNavLink() {
   const sections = document.querySelectorAll('section[id], footer[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   
   let current = '';
-  const scrollPosition = window.scrollY + 150; // Increased offset for better detection
-  
+  const scrollPosition = window.scrollY + 150; 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute('id');
     
-    // Check if current scroll position is within this section
     if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
       current = sectionId;
     }
   });
-  
-  // If no section is detected, check if we're at the top (hero section)
   if (!current && scrollPosition < 200) {
     current = 'hero';
   }
@@ -268,8 +248,6 @@ function updateActiveNavLink() {
     }
   });
 }
-
-// Throttle scroll events for better performance
 function throttle(func, limit) {
   let inThrottle;
   return function() {
@@ -282,39 +260,40 @@ function throttle(func, limit) {
     }
   }
 }
-
-// Add scroll event listener with throttling
 window.addEventListener('scroll', throttle(updateActiveNavLink, 100));
 
-// Initialize active nav on page load
-document.addEventListener('DOMContentLoaded', () => {
-  updateActiveNavLink();
-  
-  // Test smooth scrolling functionality
-  console.log('Smooth scrolling initialized');
-  console.log('Contact section found:', document.getElementById('contact'));
-  console.log('Navbar height:', document.querySelector('.navbar').offsetHeight);
-  
-  // Test contact link functionality
-  const contactLink = document.querySelector('a[href="#contact"]');
-  if (contactLink) {
-    console.log('Contact link found:', contactLink);
-  }
-  
-  // Test smooth scrolling to contact section
-  function testContactScroll() {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      console.log('Contact section position:', contactSection.offsetTop);
-      console.log('Contact section height:', contactSection.offsetHeight);
-      console.log('Page height:', document.documentElement.scrollHeight);
-    }
-  }
-  
-  testContactScroll();
+document.addEventListener('DOMContentLoaded', function () {
+  const selectors = [
+    '.fade-in-up', '.slide-up', '.animate-fade-in-down', '.feature-animate', '.service-animate', '.blog-card', '.project-row', '.team-card', '.about-main-img', '.testimonial-card', '.footer-section', '.section-title', '.about-feature-card', '.about-service-card', '.about-main-title', '.about-main-desc', '.about-main-btn', '.about-main-img', '.about-team-grid', '.about-team-section', '.about-cta-section', '.about-cta-content', '.breadcrumb', '.about-hero-title', '.work-hero-title', '.blog-title', '.contact-title', '.contact-form', '.footer-grid', '.footer-logo-col', '.footer-col', '.footer-social', '.footer-bottom'
+  ];
+  const animatedEls = document.querySelectorAll(selectors.join(','));
+  const observer = new window.IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  animatedEls.forEach(el => observer.observe(el));
 });
-
-// Test function for contact scrolling
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.hero-headline, .hero-desc, .hero-btn').forEach(el => {
+      el.style.opacity = '1';
+      el.style.animation = 'none';
+    });
+  }, 900);
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    if (window.innerWidth < 992) {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
 function testContactScroll() {
   const contactSection = document.getElementById('contact');
   if (contactSection) {
@@ -322,8 +301,6 @@ function testContactScroll() {
     console.log('Contact section position:', contactSection.offsetTop);
     console.log('Contact section height:', contactSection.offsetHeight);
     console.log('Current scroll position:', window.pageYOffset);
-    
-    // Scroll to top first, then to contact
     window.scrollTo(0, 0);
     setTimeout(() => {
       const navbarHeight = document.querySelector('.navbar').offsetHeight;
