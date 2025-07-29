@@ -1,0 +1,192 @@
+<!--an HTML for cart page-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Vegefoods</title>
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+      <!-- Top Info Bar -->
+  <div class="top-bar">
+    <span>📞 +92 348 2014604</span>
+    <span>📧 nomikhan201460@gmail.com</span>
+    <span>🚚 3-5 business days delivery & free returns</span>
+  </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+    <!-- Hamburger Button -->
+    <div class="menu-btn" id="menu-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Vegefoods</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Shop <i class="fas fa-chevron-down"></i>
+          </a>
+            <ul class="dropdown-menu">
+            <li><a href="shop.html">Shop</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="single-product.html">Single Product</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+          </li>
+          <li><a href="About.html">About</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart [0]</a></li>
+        <li><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>cart</h1>
+        <div class="breadcrumb">
+          <a href="index.html" class="breadcrumb-home">Home</a>
+          <span class="arrow">→</span>
+          <span class="current-page">Cart</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <div class="container">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cart-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="cart-product-info">
+                <img src="Images/category-1.jpg" alt="Bell Pepper" class="cart-product-img" />
+                <div>
+                  <div class="cart-product-title">Bell Pepper</div>
+                  <div class="cart-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="cart-price">$4.90</td>
+              <td><input type="number" class="cart-qty" value="1" min="1" /></td>
+              <td class="cart-total">$4.90</td>
+            </tr>
+            <tr class="cart-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="cart-product-info">
+                <img src="Images/category-2.jpg" alt="Bell Pepper" class="cart-product-img" />
+                <div>
+                  <div class="cart-product-title">Bell Pepper</div>
+                  <div class="cart-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="cart-price">$15.70</td>
+              <td><input type="number" class="cart-qty" value="1" min="1" /></td>
+              <td class="cart-total">$15.70</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cart-actions">
+          <button class="cart-nav cart-nav-left">&#8592;</button>
+          <button class="cart-nav cart-nav-right">&#8594;</button>
+        </div>
+
+        <div class="cart-summary-row">
+          <form class="cart-coupon-box">
+            <h3>Coupon Code</h3>
+            <p>Enter your coupon code if you have one</p>
+            <input type="text" placeholder="Coupon code" class="coupon-input" />
+            <button class="apply-coupon-btn">Apply Coupon</button>
+          </form>
+          <form class="cart-shipping-box">
+            <h3>Estimate shipping and tax</h3>
+            <p>Enter your destination to get a shipping estimate</p>
+            <input type="text" placeholder="Country" class="shipping-country" />
+            <input type="text" placeholder="State/Province" class="shipping-state" />
+            <input type="text" placeholder="Zip/Postal Code" class="shipping-zip" />
+            <button class="estimate-btn">Estimate</button>
+          </form>
+          <div class="cart-totals-box">
+            <h3>Cart Totals</h3>
+            <div class="cart-totals-row"><span>Subtotal</span><span class="subtotal-val">$20.60</span></div>
+            <div class="cart-totals-row"><span>Delivery</span><span>$0.00</span></div>
+            <div class="cart-totals-row"><span>Discount</span><span class="discount-val">$3.00</span></div>
+            <div class="cart-totals-row cart-totals-total"><span>TOTAL</span><span class="total-val">$17.60</span></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container newsletter-container">
+        <div class="newsletter-text">
+          <h3>Subcribe to our Newsletter</h3>
+          <p>Get e-mail updates about our latest shops and special offers</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container footer-container">
+        <div class="footer-section footer-nav">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-contact">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> www.vegefoods.com</li>
+            <li><i class="fas fa-phone"></i> +92 348 2014604</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Mardan, Khyber Pakhtunkhwa, Pakistan
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section footer-social">
+          <h3>Follow Us</h3>
+          <div class="footer-social-icons">
+              <a href="#" target="_blank"><img src="images/Facebook.webp" alt="Facebook" class="footer-social-img"></a>
+              <a href="#" target="_blank"><img src="images/Twitter.png" alt="X" class="footer-social-img"></a>
+              <a href="#" target="_blank"><img src="images/Linkedin.png" alt="LinkedIn" class="footer-social-img"></a>
+          </div>
+      </div>
+  </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy;2025 All rights reserved | This project is made with <i class="fas fa-heart"></i> for Ezitech Intenship by Muhammad Nouman</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

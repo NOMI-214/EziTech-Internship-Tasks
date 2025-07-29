@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wishlist</title>
+    <link rel="stylesheet" href="css/wishlist.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <span>📞 +92 348 2014604</span>
+    <span>📧 nomikhan201460@gmail.com</span>
+    <span>🚚 3-5 business days delivery & free returns</span>
+  </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+    <!-- Hamburger Button -->
+    <div class="menu-btn" id="menu-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Vegefoods</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Shop <i class="fas fa-chevron-down"></i>
+          </a>
+            <ul class="dropdown-menu">
+            <li><a href="shop.html">Shop</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="single-product.html">Single Product</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+          </li>
+          <li><a href="About.html">About</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count">[0]</span></a></li>
+        <li><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+    </div>
+  </nav>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Wishlist</h1>
+            <div class="breadcrumb">
+              <a href="index.html" class="breadcrumb-home">Home</a>
+              <span class="arrow">→</span>
+              <span class="current-page">WishList</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Wishlist Section -->
+    <section class="wishlist-section">
+      <div class="container">
+        <table class="wishlist-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product List</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="wishlist-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="wishlist-product-info">
+                <img src="Wishlist-images/product-1.jpg" alt="Bell Pepper" class="wishlist-product-img" />
+                <div>
+                  <div class="wishlist-product-title">Bell Pepper</div>
+                  <div class="wishlist-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="wishlist-price">$4.90</td>
+              <td><input type="number" class="wishlist-qty" value="1" min="1" /></td>
+              <td class="wishlist-total">$4.90</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr class="wishlist-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="wishlist-product-info">
+                <img src="Wishlist-images/product-2.jpg" alt="Bell Pepper" class="wishlist-product-img" />
+                <div>
+                  <div class="wishlist-product-title">Bell Pepper</div>
+                  <div class="wishlist-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="wishlist-price">$15.70</td>
+              <td><input type="number" class="wishlist-qty" value="1" min="1" /></td>
+              <td class="wishlist-total">$15.70</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr class="wishlist-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="wishlist-product-info">
+                <img src="Wishlist-images/product-3.jpg" alt="Bell Pepper" class="wishlist-product-img" />
+                <div>
+                  <div class="wishlist-product-title">Bell Pepper</div>
+                  <div class="wishlist-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="wishlist-price">$15.70</td>
+              <td><input type="number" class="wishlist-qty" value="1" min="1" /></td>
+              <td class="wishlist-total">$15.70</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr class="wishlist-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="wishlist-product-info">
+                <img src="Wishlist-images/product-4.jpg" alt="Bell Pepper" class="wishlist-product-img" />
+                <div>
+                  <div class="wishlist-product-title">Bell Pepper</div>
+                  <div class="wishlist-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="wishlist-price">$15.70</td>
+              <td><input type="number" class="wishlist-qty" value="1" min="1" /></td>
+              <td class="wishlist-total">$15.70</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr class="wishlist-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="wishlist-product-info">
+                <img src="Wishlist-images/product-5.jpg" alt="Bell Pepper" class="wishlist-product-img" />
+                <div>
+                  <div class="wishlist-product-title">Bell Pepper</div>
+                  <div class="wishlist-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="wishlist-price">$15.70</td>
+              <td><input type="number" class="wishlist-qty" value="1" min="1" /></td>
+              <td class="wishlist-total">$15.70</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr class="wishlist-item">
+              <td><button class="remove-item">&times;</button></td>
+              <td class="wishlist-product-info">
+                <img src="Wishlist-images/product-6.jpg" alt="Bell Pepper" class="wishlist-product-img" />
+                <div>
+                  <div class="wishlist-product-title">Bell Pepper</div>
+                  <div class="wishlist-product-desc">Far far away, behind the word mountains, far from the countries</div>
+                </div>
+              </td>
+              <td class="wishlist-price">$15.70</td>
+              <td><input type="number" class="wishlist-qty" value="1" min="1" /></td>
+              <td class="wishlist-total">$15.70</td>
+              <td><button class="add-to-cart-btn">Add to Cart</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="wishlist-actions">
+          <button class="wishlist-nav wishlist-nav-left">&#8592;</button>
+          <button class="wishlist-nav wishlist-nav-right">&#8594;</button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container footer-container">
+        <div class="footer-section footer-nav">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-contact">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> www.vegefoods.com</li>
+            <li><i class="fas fa-phone"></i> +92 348 2014604</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Mardan, Khyber Pakhtunkhwa, Pakistan
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy;2025 All rights reserved | This project is made with <i class="fas fa-heart"></i> for Ezitech Intenship by Muhammad Nouman</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/wishlist.js"></script>
+  </body>
+</html>

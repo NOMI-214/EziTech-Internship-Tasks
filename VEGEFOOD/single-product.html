@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Product | Vegefoods</title>
+    <link rel="stylesheet" href="css/single-product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+   <!-- Top Info Bar -->
+   <div class="top-bar">
+    <span>📞 +92 348 2014604</span>
+    <span>📧 nomikhan201460@gmail.com</span>
+    <span>🚚 3-5 business days delivery & free returns</span>
+  </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+    <!-- Hamburger Button -->
+    <div class="menu-btn" id="menu-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Vegefoods</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Shop <i class="fas fa-chevron-down"></i>
+          </a>
+            <ul class="dropdown-menu">
+            <li><a href="shop.html">Shop</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="single-product.html">Single Product</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+          </li>
+          <li><a href="About.html">About</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count">[0]</span></a></li>
+        <li><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Single Product</h1>
+        <div class="breadcrumb">
+          <a href="index.html" class="breadcrumb-home">Home</a>
+          <span class="arrow">→</span>
+          <span class="current-page">Single Product</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Single Product Section -->
+<section class="single-product-section">
+  <div class="container single-product-container">
+    <div class="single-product-image">
+      <img src="Images/product-1.jpg" alt="Bell Pepper" />
+    </div>
+    <div class="single-product-info">
+      <h2>Bell Pepper</h2>
+      <div class="single-product-rating">
+        <span class="stars">5.0 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        <span class="rating-count">100 Rating</span>
+        <span class="sold-count">300 Sold</span>
+      </div>
+      <div class="single-product-price">$120.00</div>
+      <div class="single-product-desc">
+        A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. That should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.
+      </div>
+      <form class="single-product-form">
+        <select class="single-product-size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <div class="single-product-qty-group">
+          <button type="button" class="qty-btn qty-minus">-</button>
+          <input type="number" class="single-product-qty" value="1" min="1" />
+          <button type="button" class="qty-btn qty-plus">+</button>
+        </div>
+        <div class="single-product-stock">600 kg available</div>
+        <button class="single-add-to-cart">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Related Products Section -->
+<section class="related-products-section">
+  <div class="container">
+    <div class="related-products-label">Products</div>
+    <h2 class="related-products-title">Related Products</h2>
+    <p class="related-products-desc">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+    <div class="related-products-list">
+      <div class="related-product-card">
+        <div class="related-product-badge">20%</div>
+        <img src="Images/product-1.jpg" alt="Bell Pepper" />
+        <div class="related-product-info">
+          <div class="related-product-name">BELL PEPPER</div>
+          <div class="related-product-price"><span class="old-price">$150.00</span> $120.00</div>
+        </div>
+        <div class="related-product-actions">
+          <button class="related-action"><i class="fas fa-bars"></i></button>
+          <button class="related-action"><i class="fas fa-shopping-cart"></i></button>
+          <button class="related-action"><i class="fas fa-heart"></i></button>
+        </div>
+      </div>
+      <div class="related-product-card">
+        <img src="Images/product-2.jpg" alt="Strawberry" />
+        <div class="related-product-info">
+          <div class="related-product-name">STRAWBERRY</div>
+          <div class="related-product-price">$100.00</div>
+        </div>
+        <div class="related-product-actions">
+          <button class="related-action"><i class="fas fa-bars"></i></button>
+          <button class="related-action"><i class="fas fa-shopping-cart"></i></button>
+          <button class="related-action"><i class="fas fa-heart"></i></button>
+        </div>
+      </div>
+      <div class="related-product-card">
+        <img src="Images/product-3.jpg" alt="Green Beans" />
+        <div class="related-product-info">
+          <div class="related-product-name">GREEN BEANS</div>
+          <div class="related-product-price">$100.00</div>
+        </div>
+        <div class="related-product-actions">
+          <button class="related-action"><i class="fas fa-bars"></i></button>
+          <button class="related-action"><i class="fas fa-shopping-cart"></i></button>
+          <button class="related-action"><i class="fas fa-heart"></i></button>
+        </div>
+      </div>
+      <div class="related-product-card">
+        <img src="Images/product-4.jpg" alt="Purple Cabbage" />
+        <div class="related-product-info">
+          <div class="related-product-name">PURPLE CABBAGE</div>
+          <div class="related-product-price">$100.00</div>
+        </div>
+        <div class="related-product-actions">
+          <button class="related-action"><i class="fas fa-bars"></i></button>
+          <button class="related-action"><i class="fas fa-shopping-cart"></i></button>
+          <button class="related-action"><i class="fas fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <div class="container newsletter-container">
+    <div class="newsletter-text">
+      <h3>Subcribe to our Newsletter</h3>
+      <p>Get e-mail updates about our latest shops and special offers</p>
+    </div>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+    <!-- Footer -->
+<footer class="footer" id="footer">
+    <div class="container footer-container">
+        <div class="footer-section footer-nav">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Contact Info</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> www.vegefoods.com</li>
+                <li><i class="fas fa-phone"></i> +92 348 2014604</li>
+                <li><i class="fas fa-map-marker-alt"></i> Mardan, Khyber Pakhtunkhwa, Pakistan</li>
+            </ul>
+        </div>
+        <div class="footer-section footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy;2025 All rights reserved | This project is made with <i class="fas fa-heart"></i> for Ezitech Intenship by Muhammad Nouman</p>
+    </div>
+</footer>
+<script src="js/single-product.js"></script>    
+</body>
+</html>

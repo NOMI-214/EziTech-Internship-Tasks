@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Vegefoods</title>
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body>
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+      <span>📞 +92 348 2014604</span>
+      <span>📧 nomikhan201460@gmail.com</span>
+      <span>🚚 3-5 business days delivery & free returns</span>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <!-- Hamburger Button -->
+      <div class="menu-btn" id="menu-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Vegefoods</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Shop <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="single-product.html">Single Product</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+          </li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart [0]</a></li>
+          <li><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Check Out</h1>
+          <div class="breadcrumb">
+            <a href="index.html" class="breadcrumb-home">Home</a>
+            <span class="arrow">→</span>
+            <span class="current-page">Check Out</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+      <div class="container checkout-container">
+        <form class="billing-form">
+          <h2>Billing Details</h2>
+          <div class="billing-row">
+            <div class="billing-field">
+              <label for="firstName">Firt Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="billing-field">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+          <div class="billing-row">
+            <div class="billing-field billing-field-wide">
+              <label for="country">State / Country</label>
+              <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="France">France</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Germany">Germany</option>
+              </select>
+            </div>
+          </div>
+          <div class="billing-row">
+            <div class="billing-field">
+              <label for="address1">Street Address</label>
+              <input type="text" id="address1" name="address1" placeholder="House number and street name" required />
+            </div>
+            <div class="billing-field">
+              <label for="address2"> </label>
+              <input type="text" id="address2" name="address2" placeholder="Appartment, suite, unit etc: (optional)" />
+            </div>
+          </div>
+          <div class="billing-row">
+            <div class="billing-field">
+              <label for="city">Town / City</label>
+              <input type="text" id="city" name="city" required />
+            </div>
+            <div class="billing-field">
+              <label for="zip">Postcode / ZIP *</label>
+              <input type="text" id="zip" name="zip" required />
+            </div>
+          </div>
+          <div class="billing-row">
+            <div class="billing-field">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" required />
+            </div>
+            <div class="billing-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="billing-row billing-options">
+            <label><input type="checkbox" name="createAccount" /> Create an Account?</label>
+            <label><input type="checkbox" name="shipDifferent" /> Ship to different address</label>
+          </div>
+        </form>
+        <div class="checkout-summary">
+          <div class="cart-total-box">
+            <h3>Cart Total</h3>
+            <div class="cart-total-row"><span>Subtotal</span><span class="subtotal-val">$20.60</span></div>
+            <div class="cart-total-row"><span>Delivery</span><span>$0.00</span></div>
+            <div class="cart-total-row"><span>Discount</span><span class="discount-val">$3.00</span></div>
+            <div class="cart-total-row cart-total-final"><span>TOTAL</span><span class="total-val">$17.60</span></div>
+          </div>
+          <form class="payment-method-box">
+            <h3>Payment Method</h3>
+            <label><input type="radio" name="payment" value="bank" required /> Direct Bank Tranfer</label>
+            <label><input type="radio" name="payment" value="check" /> Check Payment</label>
+            <label><input type="radio" name="payment" value="paypal" /> Paypal</label>
+            <label class="terms-label"><input type="checkbox" name="terms" required /> I have read and accept the terms and conditions</label>
+            <button class="place-order-btn" type="submit">Place an order</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container newsletter-container">
+        <div class="newsletter-text">
+          <h3>Subcribe to our Newsletter</h3>
+          <p>Get e-mail updates about our latest shops and special offers</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container footer-container">
+        <div class="footer-section footer-nav">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-contact">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> www.vegefoods.com</li>
+            <li><i class="fas fa-phone"></i> +92 348 2014604</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Mardan, Khyber Pakhtunkhwa, Pakistan
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section footer-social">
+          <h3>Follow Us</h3>
+          <div class="footer-social-icons">
+              <a href="#" target="_blank"><img src="images/Facebook.webp" alt="Facebook" class="footer-social-img"></a>
+              <a href="#" target="_blank"><img src="images/Twitter.png" alt="X" class="footer-social-img"></a>
+              <a href="#" target="_blank"><img src="images/Linkedin.png" alt="LinkedIn" class="footer-social-img"></a>
+          </div>
+      </div>
+  </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy;2025 All rights reserved | This project is made with <i class="fas fa-heart"></i> for Ezitech Intenship by Muhammad Nouman</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
