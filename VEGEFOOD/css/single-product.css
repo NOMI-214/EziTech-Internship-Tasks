@@ -1195,33 +1195,44 @@ body { overflow-x: hidden;
 /* Newsletter Section (reuse from cart/about) */
 .newsletter-section {
   background: #fafaf8;
-  padding: 2.5rem 0;
-  margin-top: 2.5rem;
+  padding: 2rem 0;
+  margin-top: 0;
+  overflow: hidden;
 }
+
 .newsletter-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
 .newsletter-text h3 {
   margin: 0;
   font-size: 1.25rem;
   color: #000;
+  font-weight: 600;
 }
+
 .newsletter-text p {
   margin: 0.5rem 0 0;
   color: #777;
   font-size: 0.9rem;
+  line-height: 1.5;
 }
+
 .newsletter-form {
   display: flex;
   gap: 0;
-  margin-top: 1rem;
-  flex: 1 1 100%;
+  margin-top: 0;
+  flex: 1 1 auto;
   max-width: 30rem;
+  min-width: 0;
 }
+
 .newsletter-form input {
   padding: 0.7rem 1rem;
   border: 1px solid #ccc;
@@ -1229,7 +1240,10 @@ body { overflow-x: hidden;
   border-radius: 0.3rem 0 0 0.3rem;
   flex: 1;
   font-size: 1rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
+
 .newsletter-form button {
   background: #8bc34a;
   color: #fff;
@@ -1239,7 +1253,10 @@ body { overflow-x: hidden;
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
+
 .newsletter-form button:hover {
   background: #7cb342;
 }
@@ -1267,6 +1284,29 @@ body { overflow-x: hidden;
     gap: 1.2rem;
   }
 }
+
+@media (max-width: 900px) {
+  .newsletter-section {
+    padding: 1.8rem 0;
+  }
+  
+  .newsletter-container {
+    gap: 1.2rem;
+  }
+  
+  .newsletter-text h3 {
+    font-size: 1.2rem;
+  }
+  
+  .newsletter-text p {
+    font-size: 0.88rem;
+  }
+  
+  .newsletter-form {
+    max-width: 28rem;
+  }
+}
+
 @media (max-width: 700px) {
   .single-product-info, .single-product-image {
     padding: 1.2rem 0.5rem 1rem 0.5rem;
@@ -1284,6 +1324,98 @@ body { overflow-x: hidden;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.2rem;
+  }
+  .newsletter-section {
+    padding: 1.5rem 0;
+  }
+  .newsletter-form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .newsletter-text h3 {
+    font-size: 1.1rem;
+  }
+  .newsletter-text p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter-section {
+    padding: 1.3rem 0;
+  }
+  
+  .newsletter-container {
+    gap: 1rem;
+  }
+  
+  .newsletter-text h3 {
+    font-size: 1.05rem;
+  }
+  
+  .newsletter-text p {
+    font-size: 0.83rem;
+  }
+  
+  .newsletter-form input {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .newsletter-form button {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding: 1rem 0;
+  }
+  .newsletter-container {
+    gap: 1rem;
+  }
+  .newsletter-text h3 {
+    font-size: 1rem;
+  }
+  .newsletter-text p {
+    font-size: 0.8rem;
+  }
+  .newsletter-form input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .newsletter-form button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .newsletter-section {
+    padding: 0.8rem 0;
+  }
+  
+  .newsletter-container {
+    gap: 0.8rem;
+  }
+  
+  .newsletter-text h3 {
+    font-size: 0.95rem;
+  }
+  
+  .newsletter-text p {
+    font-size: 0.78rem;
+  }
+  
+  .newsletter-form input {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  .newsletter-form button {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
   }
 }
 /* =====================

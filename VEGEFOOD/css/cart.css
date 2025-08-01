@@ -1113,15 +1113,15 @@ body { overflow-x: hidden;
 /* Newsletter Section */
 .newsletter-section {
   background: #fafaf8;
-  padding: 2.5rem 0;
-  margin-top: 2.5rem;
+  padding: 2rem 0;
+  margin-top: 0;
 }
 .newsletter-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .newsletter-text h3 {
   margin: 0;
@@ -1136,9 +1136,10 @@ body { overflow-x: hidden;
 .newsletter-form {
   display: flex;
   gap: 0;
-  margin-top: 1rem;
-  flex: 1 1 100%;
+  margin-top: 0;
+  flex: 1 1 auto;
   max-width: 30rem;
+  min-width: 0;
 }
 .newsletter-form input {
   padding: 0.7rem 1rem;
@@ -1147,6 +1148,7 @@ body { overflow-x: hidden;
   border-radius: 0.3rem 0 0 0.3rem;
   flex: 1;
   font-size: 1rem;
+  min-width: 0;
 }
 .newsletter-form button {
   background: #8bc34a;
@@ -1157,6 +1159,7 @@ body { overflow-x: hidden;
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s;
+  white-space: nowrap;
 }
 .newsletter-form button:hover {
   background: #7cb342;
@@ -1211,6 +1214,91 @@ body { overflow-x: hidden;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.2rem;
+  }
+  .newsletter-section {
+    padding: 1.5rem 0;
+  }
+  .newsletter-form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .newsletter-text h3 {
+    font-size: 1.1rem;
+  }
+  .newsletter-text p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter-section {
+    padding: 1.2rem 0;
+  }
+  .newsletter-container {
+    gap: 1rem;
+  }
+  .newsletter-text h3 {
+    font-size: 1.05rem;
+  }
+  .newsletter-text p {
+    font-size: 0.82rem;
+  }
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding: 1rem 0;
+  }
+  .newsletter-container {
+    gap: 1rem;
+  }
+  .newsletter-text h3 {
+    font-size: 1rem;
+  }
+  .newsletter-text p {
+    font-size: 0.8rem;
+  }
+  .newsletter-form input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .newsletter-form button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .newsletter-section {
+    padding: 0.8rem 0;
+  }
+  .newsletter-container {
+    gap: 0.8rem;
+  }
+  .newsletter-text h3 {
+    font-size: 0.9rem;
+  }
+  .newsletter-text p {
+    font-size: 0.75rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .newsletter-form input {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+  }
+  .newsletter-form button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 0.3rem;
+    width: 100%;
   }
 }
 @media (max-width: 56rem) {

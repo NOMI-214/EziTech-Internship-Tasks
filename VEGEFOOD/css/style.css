@@ -979,6 +979,8 @@ body {
 .deal {
   padding: 4rem 0;
   position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 .deal-bg {
   background-size: cover;
@@ -989,6 +991,8 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 .deal-overlay {
   background: rgba(255, 255, 255, 0.85);
@@ -998,6 +1002,8 @@ body {
   max-width: 32rem;
   margin: 2rem auto;
   box-shadow: 0 0.25rem 1rem rgba(130, 174, 70, 0.08);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 .deal-content h2 {
   font-size: 2rem;
@@ -1024,6 +1030,9 @@ body {
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 .timer-segment {
   background: #f7f6f2;
@@ -1031,6 +1040,8 @@ body {
   padding: 0.7rem 1.2rem;
   text-align: center;
   min-width: 3.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .timer-days,
 .timer-hours,
@@ -1057,6 +1068,98 @@ body {
 }
 .deal-btn:hover {
   background: #6e943c;
+}
+
+/* Responsive fixes for Deal of the Day section */
+@media (max-width: 768px) {
+  .deal {
+    padding: 2rem 0;
+  }
+  
+  .deal-overlay {
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+    max-width: 90%;
+  }
+  
+  .deal-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .deal-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .deal-timer {
+    gap: 1rem;
+  }
+  
+  .timer-segment {
+    padding: 0.5rem 0.8rem;
+    min-width: 2.5rem;
+  }
+  
+  .timer-days,
+  .timer-hours,
+  .timer-minutes,
+  .timer-seconds {
+    font-size: 1.1rem;
+  }
+  
+  .timer-label {
+    font-size: 0.7rem;
+  }
+  
+  .deal-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deal {
+    padding: 1.5rem 0;
+  }
+  
+  .deal-overlay {
+    padding: 1.5rem 0.5rem;
+    margin: 0.5rem auto;
+    max-width: 95%;
+  }
+  
+  .deal-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .deal-content h3 {
+    font-size: 1rem;
+  }
+  
+  .deal-timer {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .timer-segment {
+    padding: 0.4rem 0.6rem;
+    min-width: 2rem;
+  }
+  
+  .timer-days,
+  .timer-hours,
+  .timer-minutes,
+  .timer-seconds {
+    font-size: 1rem;
+  }
+  
+  .timer-label {
+    font-size: 0.6rem;
+  }
+  
+  .deal-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
 }
 /* Swiper container */
 .testimonial-swiper {
@@ -2409,14 +2512,14 @@ body {
 .card-hero .hero-content {
   position: static;
   z-index: 2;
-  text-align: left;
+  text-align: center;
   width: 100%;
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
   background: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   margin-bottom: auto;
 }
 .hero-img-block {
@@ -2467,7 +2570,7 @@ body {
   pointer-events: auto;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
-  text-align: left;
+  text-align: center;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -2588,6 +2691,9 @@ body {
   }
   .card-hero .hero-content {
     padding: 0.7rem 0.3rem 0.3rem 0.3rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   .hero-title {
     font-size: 1rem;
@@ -2639,6 +2745,9 @@ body {
   }
   .card-hero .hero-content {
     padding: 0.3rem 0.1rem 0.1rem 0.1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   .hero-title {
     font-size: 0.7rem;
